@@ -47,6 +47,7 @@ public class LoginPage extends Setup {
     }
     public void ClickOKBtn(){
         OKButton.click();
+        System.out.println("OK Button clicked");
     }
 
     public void getSignInTitle(){
