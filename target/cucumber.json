@@ -1,0 +1,146 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "start_timestamp": "2022-01-27T18:16:23.706Z",
+        "before": [
+          {
+            "result": {
+              "duration": 7953000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDef.Hook.startTest()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Login with valid email and password",
+        "description": "",
+        "id": "login-feature-test;login-with-valid-email-and-password",
+        "after": [
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDef.Hook.endTest(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 34000000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I am at Capital One Bank Homepage",
+            "match": {
+              "location": "stepDef.loginStep.iAmAtCapitalOneBankHomepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 223000000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I enter a valid email address",
+            "match": {
+              "location": "stepDef.loginStep.iEnterAValidEmailAddress()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 141000000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I enter a invalid password",
+            "match": {
+              "location": "stepDef.loginStep.iEnterAInvalidPassword()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 447000000,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I click on Login Button",
+            "match": {
+              "location": "stepDef.loginStep.iClickOnLoginButton()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I should not be able to successfully log in",
+            "match": {
+              "location": "stepDef.loginStep.iShouldNotBeAbleToSuccessfullyLogIn()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2848000000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I able to get an error message",
+            "match": {
+              "location": "stepDef.loginStep.iAbleToGetAnErrorMessage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 182000000,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "i clicked on OK button to return to SignIn page",
+            "match": {
+              "location": "stepDef.loginStep.iClickedOnOKButtonToReturnToSignInPage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 56000000,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I am at SignIn page",
+            "match": {
+              "location": "stepDef.loginStep.iAmAtSignInPage()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@login"
+          }
+        ]
+      }
+    ],
+    "name": "Login feature test",
+    "description": "",
+    "id": "login-feature-test",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/login.feature",
+    "tags": []
+  }
+]
