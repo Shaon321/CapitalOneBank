@@ -7,7 +7,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPage extends Setup {
+public class LoginPage implements LoginCredential {
+
+    Setup setUp = new Setup();
+    WebDriver driver;
 
     //Constructor
     public LoginPage (WebDriver driver){
@@ -38,13 +41,23 @@ public class LoginPage extends Setup {
     public void enterPassword(String pass){
         passwordLocator.sendKeys(pass);
     }
-    public void loginButton(){
-        loginButton.click();
+//    public void loginButton(){
+//        loginButton.click();
+//    }
+    @Override
+    public void loginButton() {
+    loginButton.click();
     }
 
-    public void getErrorMsg(){
-    System.out.println(errorMsg.getText());
+//    public void getErrorMsg(){
+//    System.out.println(errorMsg.getText());
+//    }
+
+    @Override
+    public void getErrorMsg() {
+        System.out.println(errorMsg.getText());
     }
+
     public void ClickOKBtn(){
         OKButton.click();
         System.out.println("OK Button clicked");
@@ -54,4 +67,8 @@ public class LoginPage extends Setup {
         //signInTitle.getText();
         System.out.println(driver.getTitle());
     }
+
+
+
+
 }

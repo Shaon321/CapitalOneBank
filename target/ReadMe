@@ -1,0 +1,1 @@
+mvn verify -Denv=qa -Dbrowser=ch
