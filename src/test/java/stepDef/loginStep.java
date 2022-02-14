@@ -13,11 +13,7 @@ public class loginStep extends Setup {
 
     @Given("I am at Capital One Bank Homepage")
     public void iAmAtCapitalOneBankHomepage() {
-        String exp = "Capital One Credit Cards, Bank, and Loans - Personal and Business";
-        String act = driver.getTitle();
-        System.out.println(act);
-        Assert.assertEquals(act, exp);
-        System.out.println("You are in the right page");
+       login.homePageAssert();
     }
 
     @And("I enter a valid email address")

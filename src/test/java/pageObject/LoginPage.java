@@ -6,16 +6,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
-public class LoginPage implements LoginCredential {
+public class LoginPage extends LoginCredental2 implements LoginCredential{
 
-    Setup setUp = new Setup();
     WebDriver driver;
 
     //Constructor
     public LoginPage (WebDriver driver){
         PageFactory.initElements(driver, this);
-        Setup.driver = driver;
+        //Setup.driver = driver; //for extends
+        this.driver=driver;
     }
 
     //Locators
@@ -35,6 +36,11 @@ public class LoginPage implements LoginCredential {
     public WebElement OKButton;
 
     // Functions
+
+    @Override //From Abstract class
+    public void homePageAssert(){
+
+    }
     public void enterEmailAddress(String email){
         emailLocator.sendKeys(email);
     }
@@ -44,7 +50,7 @@ public class LoginPage implements LoginCredential {
 //    public void loginButton(){
 //        loginButton.click();
 //    }
-    @Override
+    @Override //From Interface class
     public void loginButton() {
     loginButton.click();
     }
@@ -53,11 +59,12 @@ public class LoginPage implements LoginCredential {
 //    System.out.println(errorMsg.getText());
 //    }
 
-    @Override
+    @Override //From Interface class
     public void getErrorMsg() {
         System.out.println(errorMsg.getText());
     }
 
+    @Override //From Abstract class
     public void ClickOKBtn(){
         OKButton.click();
         System.out.println("OK Button clicked");
@@ -67,8 +74,6 @@ public class LoginPage implements LoginCredential {
         //signInTitle.getText();
         System.out.println(driver.getTitle());
     }
-
-
 
 
 }

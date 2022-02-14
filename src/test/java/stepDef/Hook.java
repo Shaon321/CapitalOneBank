@@ -8,6 +8,12 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.testng.util.Strings;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
 public class Hook extends Setup {
     public static String email;
     public static String password;
@@ -15,8 +21,12 @@ public class Hook extends Setup {
     public static String envData = System.getProperty("env"); //env catch from CommandPrompt (-Denv)
     public static String driverType = System.getProperty("browser"); //browser catch from CommandPrompt (-Dbrowser)
 
+    public static Properties prop = new Properties();
+
     @Before
-    public void startTest() {
+    public void startTest() throws IOException {
+        InputStream inputFile = new FileInputStream("src/main/java/config.properties");
+        prop.load(inputFile);
 
         //default envData  // Don't change any order
         if (Strings.isNullOrEmpty(driverType)) {
@@ -29,19 +39,28 @@ public class Hook extends Setup {
         driver = setupBrowser(driverType); // calling method from base class Setup
         switch (envData) {
             case "qa":
-                url = "https://www.capitalone.com/";
-                email = "Abc1@gmail.com";
-                password = "Abc1234";
+                //url = "https://www.capitalone.com/";
+               // email = "Abc1@gmail.com";
+                //password = "Abc1234";
+                url = prop.getProperty("urlQa");
+                email = prop.getProperty("emailQa");
+                password = prop.getProperty("passwordQa");
                 break;
             case "stg":
-                url = "https://www.capitalone.com/";
-                email = "Abc2@gmail.com";
-                password = "Abc123";
+                //url = "https://www.capitalone.com/";
+                //email = "Abc2@gmail.com";
+                //password = "Abc123";
+                url = prop.getProperty("urlStg");
+                email = prop.getProperty("emailStg");
+                password = prop.getProperty("passwordStg");
                 break;
             case "prd":
-                url = "https://www.capitalone.com/";
-                email = "Abc3@gmail.com";
-                password = "Abc12";
+               // url = "https://www.capitalone.com/";
+                //email = "Abc3@gmail.com";
+                //password = "Abc12";
+                url = prop.getProperty("urlProd");
+                email = prop.getProperty("emailProd");
+                password = prop.getProperty("passwordProd");
                 break;
         }
 
