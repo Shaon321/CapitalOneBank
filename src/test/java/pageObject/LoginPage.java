@@ -7,8 +7,12 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class LoginPage extends LoginCredental2 implements LoginCredential{
+
+
+
 
     WebDriver driver;
 
@@ -75,5 +79,11 @@ public class LoginPage extends LoginCredental2 implements LoginCredential{
         System.out.println(driver.getTitle());
     }
 
+//    @Test
+    public static void setInfo() {
+        UserAcctInfo acctInfo = new UserAcctInfo();
+        acctInfo.setAcctName("Shaon");
+        acctInfo.setBalance(5000);
+    }
 
 }
