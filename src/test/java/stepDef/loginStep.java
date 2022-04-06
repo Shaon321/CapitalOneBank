@@ -18,16 +18,17 @@ public class loginStep extends Setup {
 
     @And("I enter a valid email address")
     public void iEnterAValidEmailAddress() {
-        login.enterEmailAddress(Hook.email);
+        Hook hk = new Hook(); //By creatin object of HOOK class // non static variable -- email
+        login.enterEmailAddress(hk.email);
     }
 
     @And("I enter a invalid password")
     public void iEnterAInvalidPassword() {
-        login.enterPassword(Hook.password);
+        login.enterPassword(Hook.password); //static variable -- password
     }
 
     @When("I click on Login Button")
-    public void iClickOnLoginButton() {
+    public void iClickOnLoginButton() throws InterruptedException {
         login.loginButton();
     }
 
@@ -49,5 +50,6 @@ public class loginStep extends Setup {
     @Then("I am at SignIn page")
     public void iAmAtSignInPage() {
         login.getSignInTitle();
+        login.getAcctInfo();
     }
 }

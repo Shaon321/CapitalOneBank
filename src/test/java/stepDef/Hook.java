@@ -15,13 +15,13 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class Hook extends Setup {
-    public static String email;
+    public  String email;
     public static String password;
     public static String url;
     public static String envData = System.getProperty("env"); //env catch from CommandPrompt (-Denv)
     public static String driverType = System.getProperty("browser"); //browser catch from CommandPrompt (-Dbrowser)
 
-    public static Properties prop = new Properties();
+    public Properties prop = new Properties();
 
     @Before
     public void startTest() throws IOException {

@@ -45,8 +45,8 @@ public class LoginPage extends LoginCredental2 implements LoginCredential{
     public void homePageAssert(){
 
     }
-    public void enterEmailAddress(String email){
-        emailLocator.sendKeys(email);
+    public void enterEmailAddress(String eMail){
+        emailLocator.sendKeys(eMail);
     }
     public void enterPassword(String pass){
         passwordLocator.sendKeys(pass);
@@ -55,8 +55,9 @@ public class LoginPage extends LoginCredental2 implements LoginCredential{
 //        loginButton.click();
 //    }
     @Override //From Interface class
-    public void loginButton() {
+    public void loginButton() throws InterruptedException {
     loginButton.click();
+    Thread.sleep(5000);
     }
 
 //    public void getErrorMsg(){
@@ -65,7 +66,7 @@ public class LoginPage extends LoginCredental2 implements LoginCredential{
 
     @Override //From Interface class
     public void getErrorMsg() {
-        System.out.println(errorMsg.getText());
+        System.out.println(errorMsg.getText()); //Oops!
     }
 
     @Override //From Abstract class
@@ -79,11 +80,16 @@ public class LoginPage extends LoginCredental2 implements LoginCredential{
         System.out.println(driver.getTitle());
     }
 
-//    @Test
-    public static void setInfo() {
-        UserAcctInfo acctInfo = new UserAcctInfo();
-        acctInfo.setAcctName("Shaon");
-        acctInfo.setBalance(5000);
+
+    public void getAcctInfo() {
+        UserAcctInfo acctInfo = new UserAcctInfo(); // By creating refference object
+        acctInfo.setBalance(1000);
+        System.out.println(acctInfo.getBalance());
+        acctInfo.setAcctName("ABC");
+        System.out.println(acctInfo.getAcctName());
+
     }
+
+
 
 }
