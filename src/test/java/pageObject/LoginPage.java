@@ -11,9 +11,6 @@ import org.testng.annotations.Test;
 
 public class LoginPage extends LoginCredental2 implements LoginCredential{
 
-
-
-
     WebDriver driver;
 
     //Constructor
@@ -51,9 +48,7 @@ public class LoginPage extends LoginCredental2 implements LoginCredential{
     public void enterPassword(String pass){
         passwordLocator.sendKeys(pass);
     }
-//    public void loginButton(){
-//        loginButton.click();
-//    }
+
     @Override //From Interface class
     public void loginButton() throws InterruptedException {
     loginButton.click();
@@ -76,12 +71,11 @@ public class LoginPage extends LoginCredental2 implements LoginCredential{
     }
 
     public void getSignInTitle(){
-        //signInTitle.getText();
-        System.out.println(driver.getTitle());
+       System.out.println(driver.getTitle());
     }
 
 
-    public void getAcctInfo() {
+    public void getAcctInfo() { //From Encapsulation class
         UserAcctInfo acctInfo = new UserAcctInfo(); // By creating refference object
         acctInfo.setBalance(1000);
         System.out.println(acctInfo.getBalance());

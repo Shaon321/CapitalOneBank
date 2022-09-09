@@ -18,8 +18,8 @@ public class loginStep extends Setup {
 
     @And("I enter a valid email address")
     public void iEnterAValidEmailAddress() {
-        Hook hk = new Hook(); //By creatin object of HOOK class // non static variable -- email
-        login.enterEmailAddress(hk.email);
+        //Hook hk = new Hook(); //By creatin object of HOOK class // non static variable -- email
+        login.enterEmailAddress(Hook.email);
     }
 
     @And("I enter a invalid password")
@@ -50,6 +50,10 @@ public class loginStep extends Setup {
     @Then("I am at SignIn page")
     public void iAmAtSignInPage() {
         login.getSignInTitle();
+    }
+
+    @Then("I put some private data & get Account Info")
+    public void iPutSomePrivateDataGetAccountInfo() {
         login.getAcctInfo();
     }
 }

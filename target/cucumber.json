@@ -3,11 +3,11 @@
     "line": 1,
     "elements": [
       {
-        "start_timestamp": "2022-02-14T18:27:45.954Z",
+        "start_timestamp": "2022-09-09T19:31:55.311Z",
         "before": [
           {
             "result": {
-              "duration": 7074000000,
+              "duration": 4551000000,
               "status": "passed"
             },
             "match": {
@@ -22,7 +22,7 @@
         "after": [
           {
             "result": {
-              "duration": 2000000,
+              "duration": 1000000,
               "status": "passed"
             },
             "match": {
@@ -35,7 +35,7 @@
         "steps": [
           {
             "result": {
-              "duration": 63000000,
+              "duration": 12000000,
               "status": "passed"
             },
             "line": 4,
@@ -47,7 +47,7 @@
           },
           {
             "result": {
-              "duration": 223000000,
+              "duration": 161000000,
               "status": "passed"
             },
             "line": 5,
@@ -59,7 +59,7 @@
           },
           {
             "result": {
-              "duration": 189000000,
+              "duration": 145000000,
               "status": "passed"
             },
             "line": 6,
@@ -71,7 +71,7 @@
           },
           {
             "result": {
-              "duration": 422000000,
+              "duration": 5255000000,
               "status": "passed"
             },
             "line": 7,
@@ -83,6 +83,7 @@
           },
           {
             "result": {
+              "duration": 1000000,
               "status": "passed"
             },
             "line": 8,
@@ -94,7 +95,7 @@
           },
           {
             "result": {
-              "duration": 1567000000,
+              "duration": 46000000,
               "status": "passed"
             },
             "line": 9,
@@ -106,7 +107,7 @@
           },
           {
             "result": {
-              "duration": 126000000,
+              "duration": 154000000,
               "status": "passed"
             },
             "line": 10,
@@ -118,13 +119,25 @@
           },
           {
             "result": {
-              "duration": 18000000,
+              "duration": 41000000,
               "status": "passed"
             },
             "line": 11,
             "name": "I am at SignIn page",
             "match": {
               "location": "stepDef.loginStep.iAmAtSignInPage()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1000000,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "I put some private data \u0026 get Account Info",
+            "match": {
+              "location": "stepDef.loginStep.iPutSomePrivateDataGetAccountInfo()"
             },
             "keyword": "Then "
           }

@@ -9,3 +9,4 @@ Feature: Login feature test
     Then I able to get an error message
     Then i clicked on OK button to return to SignIn page
     Then I am at SignIn page
+    Then I put some private data & get Account Info

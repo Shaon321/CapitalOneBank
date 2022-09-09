@@ -15,7 +15,7 @@ import java.io.InputStream;
 import java.util.Properties;
 
 public class Hook extends Setup {
-    public  String email;
+    public static String email;
     public static String password;
     public static String url;
     public static String envData = System.getProperty("env"); //env catch from CommandPrompt (-Denv)
